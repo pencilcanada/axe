@@ -140,6 +140,7 @@
         "overallRating"  : "8",
         "reviews" : [
             {
+                "id"            : "23023",
                 "avatar"   		: "avatar/u3020_head3.jpg",
                 "postedBy" 		: "MomWith2Kids",
                 "postedDate"	: "03/04/2016",
@@ -147,12 +148,14 @@
                 "rating"        : "10",
                 "comments"      : [
                     {
+                        "id"            : "230231",
                         "avatar"   		: "avatar/u1322_head1.jpg",
-                        "postedBy" 		: "Mamacas",
+                        "postedBy" 		: "Mamacass",
                         "postedDate"	: "03/05/2016",
                         "comment"       : "I considering taking my son this class, I wonder what is the overall class experience like? can you elaborate?"
                     },
                     {
+                        "id"            : "230232",
                         "avatar"   		: "avatar/u3020_head3.jpg",
                         "postedBy" 		: "MomWith2Kids",
                         "postedDate"	: "03/08/2016",
@@ -162,6 +165,7 @@
             },
 
             {
+                "id"            : "23022",
                 "avatar"   		: "avatar/u4020_head1.jpg",
                 "postedBy" 		: "AngryPapa",
                 "postedDate"	: "01/02/2015",
