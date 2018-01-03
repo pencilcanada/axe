@@ -1,0 +1,30 @@
+.header {
+    background-color: #666;
+    height : 75px;
+    padding: 20px 20px 0 20px;
+}
+
+.header a {
+    color : #fff;
+    font-size: 45px;
+    text-decoration: none;
+}
+
+button {
+    margin-top : 10px;
+    padding: 10px 15px;
+    border-radius : 5px;
+    background-color : #dadada;
+    box-shadow : 0 none;
+    border : 0 none;
+    color : #000000;
+    font-weight: 300;
+    float : right;
+    margin-right : 15px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color : #161300;
+    color : #ffffff;
+}
