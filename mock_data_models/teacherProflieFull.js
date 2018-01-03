@@ -78,7 +78,7 @@
             "isPrimaryAddress"	: "true",
             "address"  			: "",
             "city"				: "",
-            "province"     	: "",
+            "province"     	    : "",
             "postalCode"    	: "",
             "startDate"     	: "03/04/2018",
             "duration"      	: "4 weeks",
@@ -112,7 +112,7 @@
             "isPrimaryAddress"	: "false",
             "address"  			: "30 TownCenter Rd",
             "city"				: "Scarborough",
-            "province"     	: "ON",
+            "province"     	    : "ON",
             "postalCode"    	: "L3R0V4",
             "startDate"     	: "03/05/2018",
             "duration"      	: "6 weeks",
@@ -144,7 +144,7 @@
                 "avatar"   		: "avatar/u3020_head3.jpg",
                 "postedBy" 		: "MomWith2Kids",
                 "postedDate"	: "03/04/2016",
-                "review"       : "My young one took Mr Doh's drawing class, great inspirational class for 8 year old",
+                "review"        : "My young one took Mr Doh's drawing class, great inspirational class for 8 year old",
                 "rating"        : "10",
                 "comments"      : [
                     {
@@ -169,7 +169,7 @@
                 "avatar"   		: "avatar/u4020_head1.jpg",
                 "postedBy" 		: "AngryPapa",
                 "postedDate"	: "01/02/2015",
-                "review"       : "This class wasn't helping, the group exercise is very unnecessary, and that eat up 1/3 of the class time",
+                "review"         : "This class wasn't helping, the group exercise is very unnecessary, and that eat up 1/3 of the class time",
                 "rating"        : "6",
                 "comments"      : []
             }
