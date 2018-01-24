@@ -7,7 +7,7 @@ import { Component, OnInit } from '@angular/core';
 })
 export class SearchComponent implements OnInit {
 
-  private searchPlaceHolder = "search away...";
+  public searchPlaceHolder = "search away...";
 
   constructor() { }
 

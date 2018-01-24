@@ -1,15 +1,17 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 
-import appRoutes from 'app/app.routes';
+// routes
+import { Router, routingComponets } from 'app/app.router';
+
+// main frame
 import { AppComponent } from './app.component';
 import { HeaderComponent } from './header/header.component';
 import { FooterComponent } from './footer/footer.component';
-import { AccountRecoverComponent } from './account-recover/account-recover.component';
-import { AccountSettingComponent } from './account-setting/account-setting.component';
-import { ProfileComponent } from './profile/profile.component';
-import { SearchComponent } from './search/search.component';
+
+// share and common
 import { DynamicFormComponent } from './share/dynamic-form/dynamic-form.component';
+
 
 
 @NgModule({
@@ -17,17 +19,14 @@ import { DynamicFormComponent } from './share/dynamic-form/dynamic-form.componen
     AppComponent,
     HeaderComponent,
     FooterComponent,
-    AccountRecoverComponent,
-    AccountSettingComponent,
-    ProfileComponent,
-    SearchComponent,
-    DynamicFormComponent
+    DynamicFormComponent,
+    routingComponets
   ],
   imports: [
     BrowserModule,
-    appRoutes,
+    Router
   ],
   providers: [],
   bootstrap: [AppComponent]
 })
-export class AppModule { }
+export class AppModule {}

@@ -1,12 +1,16 @@
 import { Component, OnInit } from '@angular/core';
+import { ActivatedRoute } from "@angular/router";
+import "rxjs/add/operator/map";
 
 @Component({
   selector: 'app-account-setting',
   templateUrl: './account-setting.component.html',
   styleUrls: ['./account-setting.component.css']
 })
+
 export class AccountSettingComponent implements OnInit {
 
+    public id;
 
     mock_data = {
 
@@ -60,9 +64,11 @@ export class AccountSettingComponent implements OnInit {
     ];
 
 
-  constructor() { }
-
-  ngOnInit() {
+  constructor(private route:ActivatedRoute) {
+    this.id = route.params.map((p:any) => p.id);
+    console.log(this.id);
   }
+
+  ngOnInit() {}
 
 }
