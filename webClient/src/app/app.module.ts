@@ -2,7 +2,7 @@ import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 
 // routes
-import { Router, routingComponets } from 'app/app.router';
+import { Router, routingComponets } from './app.router';
 
 // main frame
 import { AppComponent } from './app.component';
@@ -10,7 +10,9 @@ import { HeaderComponent } from './header/header.component';
 import { FooterComponent } from './footer/footer.component';
 
 // share and common
+import { FormsModule } from '@angular/forms';
 import { DynamicFormComponent } from './share/dynamic-form/dynamic-form.component';
+import { DynamicFormFieldComponent } from './share/dynamic-form-field/dynamic-form-field.component';
 
 
 
@@ -20,10 +22,12 @@ import { DynamicFormComponent } from './share/dynamic-form/dynamic-form.componen
     HeaderComponent,
     FooterComponent,
     DynamicFormComponent,
+    DynamicFormFieldComponent,
     routingComponets
   ],
   imports: [
     BrowserModule,
+    FormsModule,
     Router
   ],
   providers: [],
