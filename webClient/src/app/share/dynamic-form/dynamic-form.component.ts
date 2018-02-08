@@ -1,7 +1,5 @@
 import { Component, OnInit, Input, ViewChildren, QueryList } from '@angular/core';
-import { UtilsHelper } from '../../UtilsHelper/utils-helper';
 import { DynamicFormFieldComponent } from '../dynamic-form-field/dynamic-form-field.component';
-import { AfterViewInit } from '@angular/core/src/metadata/lifecycle_hooks';
 import { forEach } from '@angular/router/src/utils/collection';
 
 
@@ -15,21 +13,19 @@ import { forEach } from '@angular/router/src/utils/collection';
   `,
   styles: []
 })
-export class DynamicFormComponent implements OnInit , AfterViewInit {
+export class DynamicFormComponent implements OnInit  {
 
-  @ViewChildren(DynamicFormFieldComponent) formFields: QueryList<DynamicFormFieldComponent>;
   @Input() dataObj;
-  @Input() dataFormatObj;
+  @Input() formatObj;
+  @ViewChildren(DynamicFormFieldComponent) formFields: QueryList<DynamicFormFieldComponent>;
 
   public formData;
 
   constructor() { }
 
   ngOnInit() {
-      this.formData = UtilsHelper.frebicateFormData(this.dataObj, this.dataFormatObj);
+      this.formData = this.parseDataFromFormat(this.dataObj, this.formatObj);
   }
-
-  ngAfterViewInit() {}
 
   public validate(): boolean {
     let validation = true;
@@ -45,7 +41,39 @@ export class DynamicFormComponent implements OnInit , AfterViewInit {
   }
 
   public getFormData(): any {
-    this.formFields.forEach(field => field.getFieldValue());
+    this.dataObj = this.getUpdateDataObjFromFields(this.dataObj);
+    return this.dataObj;
+  }
+
+  private getUpdateDataObjFromFields(data: any): any {
+    this.formFields.forEach(field => {
+      const key = field.getFieldValue()['key'];
+      const value = field.getFieldValue()['value'];
+      for (const property in data) {
+        if ( property === key) {
+          data[property] = value;
+        }
+      }
+    });
+    return data;
+  }
+
+  // tslint:disable-next-line:member-ordering
+  private parseDataFromFormat (data: Object, format: any): any {
+    const formData: any = [];
+    // tslint:disable-next-line:forin
+    for ( const i in format) {
+        const formatObj = format[i];
+        inner: for (const property in data) {
+            if (property === formatObj.key) {
+                const formatedData = formatObj;
+                formatedData.data = data[formatObj.key];
+                formData.push(formatedData);
+                break inner;
+            }
+        }
+    }
+    return formData;
   }
 
 }
