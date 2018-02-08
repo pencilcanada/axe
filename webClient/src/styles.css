@@ -10,3 +10,27 @@ body {
 .clear-both {
     clear : both;
 }
+
+button {
+    padding: 10px 15px;
+    border-radius : 5px;
+    background-color : #dadada;
+    box-shadow : 0 none;
+    border : 0 none;
+    color : #000000;
+    font-weight: 300;
+    float : right;
+    margin-right : 15px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color : #161300;
+    color : #ffffff;
+}
+
+/*fix chrome blue outline */
+button:focus,
+input:focus {
+    outline:0;
+}
