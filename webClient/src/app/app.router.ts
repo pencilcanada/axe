@@ -1,9 +1,9 @@
 import { NgModule } from '@angular/core';
 import { RouterModule } from '@angular/router';
-import { AccountSettingComponent } from './account-setting/account-setting.component';
-import { SearchComponent } from 'app/search/search.component';
-import { AccountRecoverComponent } from 'app/account-recover/account-recover.component';
-import { ProfileComponent } from 'app/profile/profile.component';
+import { AccountSettingComponent } from './components/account-setting/account-setting.component';
+import { SearchComponent } from './components/search/search.component';
+import { AccountRecoverComponent } from './components/account-recover/account-recover.component';
+import { ProfileComponent } from './components/profile/profile.component';
 
 
 const routes = [

@@ -1,7 +1,7 @@
 import { Component, OnInit, AfterViewInit, ViewChild } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 import 'rxjs/add/operator/map';
-import { DynamicFormComponent } from '../share/dynamic-form/dynamic-form.component';
+import { DynamicFormComponent } from '../../share/dynamic-form/dynamic-form.component';
 
 @Component({
   selector: 'app-account-setting',
@@ -30,39 +30,44 @@ export class AccountSettingComponent implements OnInit {
     public formatMap = [
 
         {
-            "field"         : "firstName",
+            "name"          : "First Name",
+            "key"           : "firstName",
             "type"          : "text",
-            "regex"         : "/^[a-zA-Z ]$/",
+            "regex"         : "^[a-zA-Z ,.'-]+$",
             "require"       : "true",
-            "maxlength"     : "5"
+            "maxLength"     : "30"
         },
         {
-            "field"         : "lastName",
+            "name"          : "Last Name",
+            "key"           : "lastName",
             "type"          : "text",
-            "regex"         : "/^[a-zA-Z ]$/",
+            "regex"         : "^[a-zA-Z ,.'-]+$",
             "require"       : 'true',
-            "maxlength"     : "30"
+            "maxLength"     : "30"
         },
         {
-            "field"         : "email",
+            "name"          : "Email",
+            "key"           : "email",
             "type"          : "text",
-            "regex"         : "/^[a-zA-Z ]{2,30}$/",
+            "regex"         : "[a-z0-9!#$%&'*+/=?^_`{|}~-]+(?:\.[a-z0-9!#$%&'*+/=?^_`{|}~-]+)*@(?:[a-z0-9](?:[a-z0-9-]*[a-z0-9])?\.)+[a-z0-9](?:[a-z0-9-]*[a-z0-9])?",
             "require"       : "true",
-            "maxlength"     : "30"
+            "maxLength"     : "40"
         },
         {
-            "field"         : "userName",
+            "name"          : "User Name",
+            "key"           : "userName",
             "type"          : "text",
-            "regex"         : "/^[a-zA-Z ]{2,30}$/;",
+            "regex"         : "^[a-zA-Z0-9]+$",
             "require"       : "true",
-            "maxlength"     : "30"
+            "maxLength"     : "30"
         },
         {
-            "field"         : "passWord",
+            "name"          : "Password",
+            "key"           : "passWord",
             "type"          : "text",
-            "regex"         : "/^[a-zA-Z ]{2,30}$/",
             "require"       : "true",
-            "maxlength"     : "30"
+            "maxLength"     : "50",
+            "minLength"     : "8"
         }
     ];
 
@@ -77,7 +82,8 @@ export class AccountSettingComponent implements OnInit {
 
   public onSave() {
       if (this.form.validate()) {
-        this.form.getFormData();
+        // TODO :: hock up ngRx Store
+        console.log(this.form.getFormData());
       }
   }
 }

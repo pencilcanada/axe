@@ -1,0 +1,62 @@
+input {
+
+    margin: 0;
+    font: inherit;
+    color: inherit;
+
+    text-rendering: auto;
+    color: initial;
+    letter-spacing: normal;
+    word-spacing: normal;
+    text-transform: none;
+    text-indent: 0px;
+    text-shadow: none;
+    display: inline-block;
+    text-align: start;
+    margin: 0em;
+    font: 400 13.3333px Arial;
+
+    -webkit-appearance: textfield;
+    background-color: white;
+    -webkit-rtl-ordering: logical;
+    cursor: text;
+    padding: 1px;
+    border-width: 2px;
+    border-style: inset;
+    border-color: initial;
+    border-image: initial;
+
+    padding: 1px 0px;
+
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+
+    color: #555;
+    background-color: #fff;
+    background-image: none;
+
+    line-height: 1.3333333;
+
+    border: 1px solid #dcdfe4;
+
+    border-radius: 4px;
+    box-shadow: none;
+
+    height: 40px;
+    padding: 0 14px;
+    font-size: 16px;
+
+    width: 100%;
+    margin-top: 10px;
+    margin-bottom: 5px;
+}
+
+input.error {
+    color: rgb(221, 61, 61);
+    border: 1px solid rgb(221, 61, 61);
+}
+.error-message {
+    color: rgb(221, 61, 61);
+    padding: 0 14px;
+}
