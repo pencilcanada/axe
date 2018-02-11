@@ -7,9 +7,13 @@ body {
     background-color: #fafafa;
 }
 
-.clear-both {
-    clear : both;
+.title {
+    font-size: 1.6rem;
+    color: #666;
+    padding: 10px 0;
 }
+
+
 
 button {
     padding: 10px 15px;
@@ -33,4 +37,8 @@ button:hover {
 button:focus,
 input:focus {
     outline:0;
+}
+
+.clear-both {
+    clear : both;
 }
