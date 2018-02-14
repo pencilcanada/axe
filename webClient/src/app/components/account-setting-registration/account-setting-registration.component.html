@@ -1,8 +1,0 @@
-<div class="accountSetting">
-    <div class="title">
-        {{ this.hasAccount === true ? "Account Setting" : "Register" }}
-    </div>
-    <app-dynamic-form [dataObj]="this.model" [formatObj]="this.format"></app-dynamic-form>
-    <button (click)='onSave()'>Save</button>
-    <div class="clear-fix"></div>      
-</div>
