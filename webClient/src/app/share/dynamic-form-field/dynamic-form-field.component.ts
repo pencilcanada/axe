@@ -55,10 +55,13 @@ export class DynamicFormFieldComponent implements OnInit {
     // regex check
     const regex: RegExp = new RegExp(this.fieldData.regex);
     if (!UtilsHelper.isEmptyOrUndefined(this.fieldData.regex) && !regex.test(this.fieldValue)) {
-      this.validationMessage = 'Invalid format for ' + this.fieldName;
+      if (!UtilsHelper.isEmptyOrUndefined(this.fieldData.regexMessage)) {
+        this.validationMessage = this.fieldName + ' ' + this.fieldData.regexMessage;
+      } else {
+        this.validationMessage = 'Invalid format for ' + this.fieldName;
+      }
       return false;
     }
-
     return true;
   }
 

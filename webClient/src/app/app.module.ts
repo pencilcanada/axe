@@ -13,6 +13,7 @@ import { FooterComponent } from './components/footer/footer.component';
 import { FormsModule } from '@angular/forms';
 import { DynamicFormComponent } from './share/dynamic-form/dynamic-form.component';
 import { DynamicFormFieldComponent } from './share/dynamic-form-field/dynamic-form-field.component';
+import { WebService } from './service/web.service';
 
 
 
@@ -30,7 +31,7 @@ import { DynamicFormFieldComponent } from './share/dynamic-form-field/dynamic-fo
     FormsModule,
     Router
   ],
-  providers: [],
+  providers: [WebService],
   bootstrap: [AppComponent]
 })
 export class AppModule {}
